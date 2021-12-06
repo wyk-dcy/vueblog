@@ -188,7 +188,7 @@
       //初始化文章专栏
       initType(){
         const _this = this
-        this.getRequest('/type/getAllType').then(resp=>{
+        this.getRequest('/type/getAll').then(resp=>{
           console.log(resp)
           _this.getalltype = resp.obj
         })
