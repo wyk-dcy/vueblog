@@ -3,17 +3,16 @@
 let proxyObj = {};
 
 //拦截http请求
-proxyObj['/api'] = {
+proxyObj['/'] = {
     ws: false,  //关掉websocket
     target: 'http://124.221.244.201:8081', //目标转发的地址
     changeOrigin: true,
     pathRewrite:{  //请求地址重写
-        '^/api': '/'  //拦截到的地址不去修改它
+        '^/': ''  //拦截到的地址不去修改它
     }
 }
 //把上面的导出来
 module.exports = {
-    publicPath: '/api',
     devServer:{  //配置开发环境
         host: '124.221.244.201', //端口号
         // host: '192.168.49.27', //端口号

@@ -255,7 +255,7 @@ export default {
     //更新评论
     updateType(){
       const _this = this 
-      this.putRequest('/type/updateType',this.type_edit).then(resp=>{
+      this.postRequest('/type/updateType',this.type_edit).then(resp=>{
         if(resp){
           this.initComment()
           _this.dialog_edit = false

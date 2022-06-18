@@ -60,7 +60,7 @@
             <mavon-editor v-model="editForm.content"/>
           </el-form-item>
           <el-form-item style="margin: auto;">
-            <el-button type="primary" @click="submitForm('editForm')"">保存发布</el-button>
+            <el-button type="primary" @click="submitForm('editForm')">保存发布</el-button>
             <router-link to="/admin/allblogs">
               <el-button style="margin-left: 10px;">返回</el-button>
             </router-link>
@@ -233,7 +233,7 @@
                 _this.$set(_this.editForm, 'published', true)
               }
               //发布博客
-                this.putRequest('/blog/updateBlog',this.editForm).then(resp=>{
+                this.postRequest('/blog/updateBlog',this.editForm).then(resp=>{
                     if(resp){
                      
                       alert("更新成功，点击确定跳转到博客列表页面!")

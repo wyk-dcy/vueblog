@@ -30,7 +30,7 @@ Vue.prototype.deleteRequest = deleteRequest;
 
 Vue.config.productionTip = false
 Vue.prototype.axios = axios;
-axios.defaults.baseURL = "http://124.221.244.201:8082"
+axios.defaults.baseURL = "http://124.221.244.201:8081"
 axios.defaults.withCredentials = true
 Vue.use(axios);
 Vue.use(ElementUI); //使用 ElementUI

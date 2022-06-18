@@ -192,7 +192,7 @@ export default {
       this.$refs[formName2].validate((valid) => {
         if (valid) {
           const _this = this
-          this.putRequest('/links/updateLink',this.link_edit).then(resp=>{
+          this.postRequest('/links/updateLink',this.link_edit).then(resp=>{
             console.log(resp)
             _this.initLink()
             _this.dialog_edit = false

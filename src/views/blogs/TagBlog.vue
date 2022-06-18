@@ -142,7 +142,7 @@ export default {
     //更新分类
     updateTag(){
       const _this = this 
-      this.putRequest('/tag/updateTag',this.tag_edit).then(resp=>{
+      this.postRequest('/tag/updateTag',this.tag_edit).then(resp=>{
         if(resp){
           this.initTag()
           _this.dialog_edit = false

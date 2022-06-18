@@ -18,7 +18,7 @@
         </el-form-item>
         <el-form-item style="margin: auto;">
           <el-button type="info" @click="temporarySave()">暂时保存</el-button>
-          <el-button type="primary" @click="tosubmitForm('editForm')"">发布文章</el-button>
+          <el-button type="primary" @click="tosubmitForm('editForm')">发布文章</el-button>
           <!-- <el-button>取消</el-button> -->
         </el-form-item>
       </el-form>
@@ -232,6 +232,7 @@
             //发布博客
             this.postRequest('/blog/savaBT',this.editForm).then(resp=>{
               if(resp){
+                console.log("dwhkjadhkdjk")
                 _this.dialogFormVisible = false
                 alert("发布成功，点击确定跳转到博客列表页面!")
                 _this.$router.push('/admin/allblogs')
